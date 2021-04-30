@@ -122,8 +122,9 @@ h3,
 }
 
 .description{
-    display: none;
-    margin-top: 20px;
+   opacity: 0;
+   height: 0;
+   width: 0;
 }
 
 section.banner img{
@@ -169,12 +170,14 @@ main{
 
 .container .intereses input[type=checkbox],
 .container .intereses label,
+.container .perfil-usuario label,
 .container .perfil-usuario input[type=radio]
  {
         display: inline;
 }
 .container .intereses {
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 
@@ -197,7 +200,7 @@ main{
 
 .buttons button:hover,
 .buttons .login-btn:hover {
-    opacity: 0.7;
+    background-color: #0022AA;
 }
 
 .buttons .login-btn {
@@ -245,7 +248,10 @@ article div.main-article{
     padding: 15px;
 }
 
-
+main section article:hover{
+    transition: all 1s;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+}
 footer {
     background-color: #fff;
     padding-top: 30px;
@@ -273,13 +279,12 @@ footer {
 }
 
 @media (min-width: 361px){
-    main section article .description{
-        display: block;
+    main section article:hover .description{
+        transition: all 1s;
+        opacity: 1;
+        height: auto;
+        width: auto;
     }   
-
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
 
     main section div.products{
         display: flex;
@@ -374,5 +379,9 @@ footer {
 
     footer .copyright {
         font-size: 16px;
+    }
+
+    .item-footer i:hover {
+        color: teal;
     }
 }
