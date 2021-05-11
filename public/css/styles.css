@@ -78,6 +78,7 @@ header .form .submit-btn{
     border: 1px solid #000;
     color: #666;
     width: 10%;
+    display: inline;
 }
 
 div.burger-menu{
